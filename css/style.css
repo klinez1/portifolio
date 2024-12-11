@@ -1,23 +1,37 @@
+
+/*
+    Aluno: THIAGO SILVA
+    RU: 4917625
+*/
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 html{
     scroll-behavior: smooth;
     scroll-padding-top: 50px;
 }
+
+::selection{
+    background-color: #02652d;
+    color: #E1E5E1;
+}
+
 body {
-    /* background: bisque; */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1rem;
-
+    background-color: #E1E5E1;
 }
+
+/* MENU */
 
 nav{
     position: fixed;
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     font-size: clamp(12px, 2vw, 20px);
     background-color: #212121;
 }
@@ -46,23 +60,28 @@ li.item{
 }
 
 li.item:hover{
-    /* text-decoration: underline; */
-    /* line-height: .5rem; */
     background-color: #7D7F7D;
     color: #E1E5E1;
 }
+
+/* OCUPAR TODO O ESPAÇO DA TELA */
+
+.principal, .meio, .contato{
+    height: 100vh;
+    padding: 20px;
+}
+
+/* SOBRE */
 
 .principal{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* border-bottom: 1px solid; */
-    /* border-radius: 30px; */
-    height: 400px;
     min-height: fit-content;
     gap: 15px;
     width: 100%;
-    padding: 150px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    background-color: #E1E5E1;
 }
 
 .principal-texto{
@@ -72,7 +91,7 @@ li.item:hover{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-.sobre{
+.sobre-desc{
     padding: 20px;
     font-size: 30px;
     color: #7D7F7D;
@@ -80,68 +99,92 @@ li.item:hover{
     text-align: center;
 }
 
+/* MEIO FORMAÇÃO/PROJETOS */
+
 .meio{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    gap: 20px;
 }
 
-.formacao{
+.formacao, .projetos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    max-width: 500px;
+}
+
+.formacao-imagem, .projetos-imagem{
+    max-width: 200px;
+    max-height: 150px;
+    align-self: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.formacao-texto, .projetos-texto{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    justify-items: center;
-    width: 50%;
-    min-height: fit-content;
-    height: 200px;
+    gap: 10px;
 }
 
-.formacao h1{
-    /* top: 0; */
+.projetos ul li a{
+    color: #02652d;
 }
 
-.projetos{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    justify-items: center;
-    height: 50px;
-    width: 50%;
-    min-height: fit-content;
-    height: 200px;
-}
+/* FORMULARIO */
 
 .contato{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 80px;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    font-size: 30px;
 }
 
 .contato form{
     display: flex;
     flex-direction: column;
-    
+    background-color: #ffffff93;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    position: relative; /*PARA O BOTAO*/
+}
+
+.contato label{
+    font-size: 1.25rem;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-weight: bold;
 }
 
 .contato button{
     width: 100px;
+    padding: 10px;
+    background-color: #212121;
+    color: #BCBFBC;
+    cursor: pointer;
+    border-radius: 15px;
+    align-self: flex-end; /*LADO DIREITO DO FLEX*/
+}
+
+.contato button:hover {
+    background-color: #333;
 }
 
 footer {
     text-align: center;
-    font-size: .625rem;
+    font-size: 15px;
     background-color: #212121;
     padding: 30px;
     color: #BCBFBC;
 }
-
-
-
-
-
-
-
