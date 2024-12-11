@@ -163,6 +163,7 @@ li.item:hover{
 
 .contato input, .contato textarea, .contato button{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 8px;
 }
 
 .contato label{
@@ -180,6 +181,7 @@ li.item:hover{
     cursor: pointer;
     border-radius: 15px;
     align-self: flex-end; /*LADO DIREITO DO FLEX*/
+    margin-top: 8px;
 }
 
 .contato button:hover {
