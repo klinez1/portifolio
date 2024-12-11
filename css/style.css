@@ -90,6 +90,7 @@ li.item:hover{
     font-size: clamp(3.2rem, .5692rem + 8.238vw, 5.75rem);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+  
 
 .sobre-desc{
     padding: 20px;
@@ -158,6 +159,10 @@ li.item:hover{
     width: 100%;
     max-width: 500px;
     position: relative; /*PARA O BOTAO*/
+}
+
+.contato input, .contato textarea, .contato button{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .contato label{
